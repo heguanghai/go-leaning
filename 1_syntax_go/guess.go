@@ -15,13 +15,18 @@ import (
 
 func main() {
 	//printTest()
-	root,err := squareRoot(45)
+	
+	/* root,err := squareRoot(45)
 	if err != nil {
 		fmt.Println(err);
 	}else {
 		fmt.Printf("%.6f",root)
-	}
-		
+	} */
+	
+	var number int = 5
+	Pointer(&number)
+	fmt.Println(&number)
+	fmt.Println(number)
 }
 
 func printTest()  {
@@ -60,9 +65,16 @@ func guessGame()  {
 	}
 	fmt.Println("很遗憾，你失败了！目标数是：", target)
 }
+
 func squareRoot(number float64) (float64,error) {
 	if number < 0 {
 		return 0,fmt.Errorf("负数不能计算平方根！")
 	}
 	return math.Sqrt(number),nil
+}
+func Pointer(number *int) int{
+	fmt.Println("number = ",number)
+	*number = *number * 2
+	fmt.Println("*number =",*number)
+	return *number
 }
