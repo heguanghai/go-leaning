@@ -11,8 +11,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	"./greeting"
 )
 
 func main() {
@@ -29,7 +27,35 @@ func main() {
 	Pointer(&number)
 	fmt.Println(&number)
 	fmt.Println(number) */
-	greeting.Greeting()
+
+	// greeting.Greeting()
+
+	//数组
+	//1
+	var notes [7]string
+	notes[0] = "do"
+	notes[1] = "re"
+	fmt.Println(notes[0])
+	fmt.Println(notes[1])
+	//2
+	var notes2 [6]int = [6]int{1, 2, 3}
+	fmt.Println(notes2)
+	//3
+	notes3 := [7]int{5, 6, 8}
+	fmt.Println(notes3)
+	fmt.Printf("%#v\n", notes3)
+
+	//循环访问数组元素
+	//1
+	for i := 0; i < len(notes3); i++ {
+		fmt.Print(notes3[i])
+	}
+	fmt.Println()
+	//2
+	for index, v := range notes3 {
+		fmt.Printf("[%d] %d\n", index, v)
+	}
+
 }
 
 func printTest() {
