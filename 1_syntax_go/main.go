@@ -55,7 +55,6 @@ func main() {
 	for index, v := range notes3 {
 		fmt.Printf("[%d] %d\n", index, v)
 	}
-
 }
 
 func printTest() {
